@@ -1,0 +1,4 @@
+<resources>
+  <string name="app_name">My Location</string>
+  <string name="sample_toast">Show Sample Toast</string>
+</resources>
