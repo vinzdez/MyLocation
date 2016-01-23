@@ -5,6 +5,6 @@ package mylocation.com.mylocation.view;
  */
 public interface MyLocationView {
 
-  void showSnackbar();
+  void showLocation(String location);
 
 }

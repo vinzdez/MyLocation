@@ -7,6 +7,7 @@ import android.content.Context;
  */
 public interface MyLocationPresenter {
 
-  public void onResume(Context context);
+  void onGetLocationClick(Context context);
+  void onDestroy();
 
 }
