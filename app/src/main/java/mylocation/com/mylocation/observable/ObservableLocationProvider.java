@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.location.Geocoder;
 import android.location.Location;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -34,6 +35,11 @@ public class ObservableLocationProvider {
         .filter(new ConnectionStatusFilter())
         .flatMap(new ObservableLocationMap());
   }
+
+  public Observable<String> getStringRepresentationOfLocation(Context context,Location location){
+    return Observable.create(new ObservableGeocoderConnection(context, location));
+  }
+
 
   public Observable<Location> getObservable() {
     return getOndemandObservable().first();

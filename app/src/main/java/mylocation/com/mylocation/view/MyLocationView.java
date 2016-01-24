@@ -6,5 +6,7 @@ package mylocation.com.mylocation.view;
 public interface MyLocationView {
 
   void showLocation(String location);
+  void showWarningSnackbar(String cause);
+  void showReverseGeolocation(String address);
 
 }
